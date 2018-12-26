@@ -2,16 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { routerTransition } from '../router.animations';
+import { MessageService } from 'primeng/api';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
+    providers: [MessageService],
     animations: [routerTransition()]
 })
 export class LoginComponent implements OnInit {
+    user  = '';
+    password = '';
     constructor(
         private translate: TranslateService,
+        private messageService: MessageService,
         public router: Router
         ) {
             this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
@@ -23,6 +28,12 @@ export class LoginComponent implements OnInit {
     ngOnInit() {}
 
     onLoggedin() {
-        localStorage.setItem('isLoggedin', 'true');
+        if (this.user.trim() === '' || this.password.trim() === '') {
+            this.messageService.add({severity: 'info', summary: '', detail: 'Debe ingresar un Usuario y/o Contraseña válidos.'});
+        } else {
+            localStorage.setItem('isLoggedin', 'true');
+            this.router.navigate(['/dashboard']);
+        }
     }
+
 }

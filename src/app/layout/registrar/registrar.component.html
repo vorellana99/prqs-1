@@ -1,0 +1,122 @@
+<div [@routerTransition]>
+  <!-- <app-page-header [heading]="'Forms2'" [icon]="'fa-edit'"></app-page-header> -->
+  <!-- <app-page-header [heading]="'ADICIONES - PRQS 1802'" [icon]="'fa-edit'"></app-page-header> -->
+
+  <app-page-header [heading]="'Registrar'" [icon]="'fa-edit'"></app-page-header>
+
+  <div class="row">
+      <div class="col-lg-12">
+          <form class="needs-validation" novalidate>
+              <div class="row">
+                  <div class="col-md-4 mb-3">
+                      <label for="firstName">Transcribir desde</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                          Valid 1...
+                      </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                      <label for="lastName">Fecha</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                          Valid 2...
+                      </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                      <label for="lastName">Área de control</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                          Valid 3...
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 mb-3">
+                      <label for="lastName">Carné</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                          Valid 2...
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 mb-3">
+                      <label for="firstName">Transcribir desde</label>
+                      <!-- <input type="text" class="form-control" id="firstName" placeholder="" value="" required> -->
+                      <select name="" id="" class="form-control">
+                          <option>(Seleccionar)</option>
+                          <option>uno</option>
+                          <option>dos</option>
+                          <option>tres</option>
+                      </select>
+                      <div class="invalid-feedback">
+                          Valid 1...
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 mb-3">
+                      <label for="lastName">Correo</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                          Valid 3...
+                      </div>
+                  </div>
+
+              </div>
+
+              <hr class="mb-4">
+
+              <div class="row">
+                  <div class="col-md-4 mb-3">
+                      <label for="firstName">Tipo PQRS</label>
+                      <select name="" id="" class="form-control">
+                          <option>(Seleccionar)</option>
+                          <option>uno</option>
+                          <option>dos</option>
+                          <option>tres</option>
+                      </select>
+                      <div class="invalid-feedback">
+                          Valid 1...
+                      </div>
+                  </div>
+                  <div class="col-md-8 mb-3">
+                      <label for="lastName">Asunto</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                          Valid 2...
+                      </div>
+                  </div>
+
+                  <div class="col-md-12 mb-3">
+                      <label for="lastName">Descripción</label>
+                      <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                      <div class="invalid-feedback">
+                          Valid 2...
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 mb-3">
+                      <label for="lastName">Anexar archivo</label>
+                      <div class="input-group mb-3">
+                          <input type="text" class="form-control" placeholder="Seleccione un archivo." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button"><i class="fa fa-folder-open"></i></button>
+                              <!-- <button class='btn btn-lg ' style='background-color:transparent;'><i class="fa fa-pencil"></i> Edit</button> -->
+                          </div>
+                      </div>
+                  </div>                    
+                  <!-- usaremos este input como puente para seleccionar un archivo a travez de un boton -->
+                  <!-- <input id="myInput" type="file" style="visibility:hidden" />
+                  <input type="button" value="Show Dialog" onclick="$('#myInput').click();" /> -->
+                  <!-- <input id="iptTempFile" type="file" style="visibility: hidden;"> -->
+              </div>
+
+              <div class="row">
+                  <div class="col">
+                      <!-- <div class="float-right">element needs to be right aligned</div> -->
+                      <button class="btn btn-primary float-right"><i class="fa fa-save"></i> Grabar</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+  <!-- /.row -->
+</div>
